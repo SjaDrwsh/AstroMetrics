@@ -1,6 +1,5 @@
 import { errorBoundaryStore } from "../stores/errorBoundaryStore";
 
-const API_KEY = 'dyaWQ6MHvu9VmC6aMuAgbuUf54QR0FrpfWz8t9TV';
 const API_BASE_URL = "https://api.nasa.gov/";
 
 interface RequestOptions {
@@ -46,7 +45,6 @@ interface RequestOptions {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
             'Access-Control-Allow-Headers': 'Content-Type, Authorization',
-            'Authorization': `Bearer ${API_KEY}`,
             ...headers,
           },
           body: method === 'POST' ? JSON.stringify(body) : undefined,
